@@ -1,0 +1,160 @@
+
+@font-face {
+	font-family: Ubuntu; 
+    src: url(Fonts/Ubuntu.ttf);
+}
+
+@font-face {
+	font-family: Philosopher; 
+    src: url(Fonts/Philosopher.ttf); 
+}
+
+@font-face {
+	font-family: Helvetica; 
+    src: url(Fonts/HelveticaRegular.ttf); 
+}
+
+:root {
+	--gs0: #000000;
+	--gs01: #111111;
+	--gs1: #666666;
+    --gs2: #999999;
+	--gs3: #CCCCCC;
+    --gs4: #DEDEDE;
+	--gs5: #F3F3F3;
+}
+
+html {
+	height:100%;
+}
+
+body {
+	background-color: var(--gs0);
+	color: var(--gs4);
+	height:100%;
+}
+a:link {	color: var(--gs3);}
+a:visited {color: var(--gs3);}
+a:hover {color: var(--gs3);}
+a:active {color:var(--gs3);}
+
+@media screen and (orientation: landscape) {
+	.center { padding-top: 10pt; }
+	.text {padding: 1pt 20% 0 20%;}
+	.footer ul{width: 35%;}
+	.content {padding: 0 30% 0 30%;}
+}
+
+@media screen and (orientation: portrait) {
+	.center { padding-top: 25pt; }
+	.text {padding: 2pt 5% 0 5%;}
+	.footer ul{width: 100%;}
+	.content {padding: 2pt 5% 0 5%;}
+}
+
+.content {
+	margin: 0 auto;
+	
+	color: var(--gs4);
+	font-size: 14pt;
+	font-weight: bold;
+	font-family: Philosopher;
+}
+
+hr {
+	color: var(--gs3);
+}
+
+.text { 
+	margin: 0 auto;
+
+	color: var(--gs4);
+	font-size: 12pt;
+	font-family: Verdana;
+}
+.text li {
+	margin: 4pt;
+}
+
+
+.comment { /*Комментарии*/
+	margin: 5pt 5pt;
+	color:  var(--gs3);
+	font-size:9pt;
+	font-weight: normal;
+	font-family: Tahoma;
+}
+
+ul {
+    padding: 0; /* Убираем поля */
+    margin-left: 15pt; /* Отступ слева */
+}
+
+ol {
+    padding: 0; /* Убираем поля */
+    margin-left: 15pt; /* Отступ слева */
+}
+
+li {
+	margin-bottom: 7pt;
+	margin-top: 7pt;
+}
+
+h3 {
+	text-align: center;
+	font-size:15pt;
+	font-family: Helvetica;
+	letter-spacing: 3pt;
+	
+}
+h4 {
+	font-family: Helvetica;
+	letter-spacing: 1pt;
+}
+
+
+.footer {
+    position: fixed; /* Фиксированное положение */
+    bottom: 5%; /* Левый нижний угол */
+	background-color: var(--gs01);
+	text-align: center;
+	width: 100%;
+	height: 6%;
+	font-family: Tahoma;
+	font-size: 14pt;
+	
+	ul {
+		list-style-type: none;
+		margin: 0 30% 0 30%;
+		overflow: hidden;
+		background-color: var(--gs01);
+		height: 100%;
+	}
+	
+	li {
+		float: left;
+		width: 12%;
+		border-right: 1px solid var(--gs1);
+		
+	}
+	
+	li:last-child {
+		border-right: none;
+	}
+	
+	li a {
+		display: block;
+		
+		color: var(--gs3);
+		text-align: center;
+		padding:  0pt 8pt 16pt 8pt;
+		text-decoration: none;
+		
+	}
+	
+	
+	
+}
+.active {
+	background-color: var(--gs2);
+}
