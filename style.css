@@ -1,27 +1,41 @@
-
 @font-face {
-	font-family: Ubuntu; 
-    src: url(Fonts/Ubuntu.ttf);
+	font-family: Georgia;
+    src: url(Fonts/georgia.ttf);
 }
 
 @font-face {
-	font-family: Philosopher; 
-    src: url(Fonts/Philosopher.ttf); 
+	font-family: GeorgiaBold;
+    src: url(Fonts/georgiab.ttf);
 }
 
-@font-face {
-	font-family: Helvetica; 
-    src: url(Fonts/HelveticaRegular.ttf); 
+
+@media screen and (orientation: landscape) {
+	.center { padding-top: 10pt; }
+	.text {padding: 1pt 20% 0 20%;}
+	.footer ul{width: 35%; margin: 0 30% 0 30%}
+	.content {padding: 0 30% 0 30%;}
+}
+
+@media screen and (orientation: portrait) {
+	.center { padding-top: 25pt; }
+	.text {padding: 2pt 5% 0 5%;}
+	.footer ul{width: 100%; margin:0}
+	.content {padding: 2pt 5% 0 5%;}
 }
 
 :root {
-	--gs0: #000000;
-	--gs01: #111111;
-	--gs1: #666666;
-    --gs2: #999999;
-	--gs3: #CCCCCC;
-    --gs4: #DEDEDE;
-	--gs5: #F3F3F3;
+	--text-color:#a3c1db;
+	--quote-color:#5382ac;
+	--head-color:#4783b8;
+	--footLC-color:#1c273b;
+	--tagB-color:#31134f;
+	--tagF-color:#ad8dcc;
+	--markedB-color:#00264d;
+	--FN-color:#4783b8;
+}
+
+a {
+	color: var(--text-color);
 }
 
 html {
@@ -29,70 +43,100 @@ html {
 }
 
 body {
-	background-color: var(--gs0);
-	color: var(--gs4);
+	background-color: black;
+	color: var(--text-color);
 	height:100%;
-}
-a:link {	color: var(--gs3);}
-a:visited {color: var(--gs3);}
-a:hover {color: var(--gs3);}
-a:active {color:var(--gs3);}
-
-@media screen and (orientation: landscape) {
-	.center { padding-top: 10pt; }
-	.text {padding: 1pt 20% 0 20%;}
-	.footer ul{width: 35%;}
-	.content {padding: 0 30% 0 30%;}
+	overflow: hidden;
 }
 
-@media screen and (orientation: portrait) {
-	.center { padding-top: 25pt; }
-	.text {padding: 2pt 5% 0 5%;}
-	.footer ul{width: 100%;}
-	.content {padding: 2pt 5% 0 5%;}
+
+blockquote {
+	font-family: Georgia;
+	border-left: 1pt solid var(--quote-color);
+	padding-left: 5pt;
+	margin-left:5pt;
+	color: var(--quote-color);
 }
 
 .content {
 	margin: 0 auto;
-	
-	color: var(--gs4);
 	font-size: 14pt;
 	font-weight: bold;
-	font-family: Philosopher;
+	font-family: Georgia;
 }
 
 hr {
-	color: var(--gs3);
-}
+	color: var(--head-color);
+}	
+
 
 .text { 
 	margin: 0 auto;
-
-	color: var(--gs4);
-	font-size: 12pt;
+	font-size: 11pt;
 	font-family: Verdana;
+	height: 80%;
+	overflow: auto;
+	margin-bottom: 10%;
 }
+
 .text li {
 	margin: 4pt;
 }
 
 
-.comment { /*Комментарии*/
-	margin: 5pt 5pt;
-	color:  var(--gs3);
-	font-size:9pt;
+.comment { 
+	margin: 5% 15% 5% 0;
+	color:var(--text-color);
+	font-size:10pt;
 	font-weight: normal;
 	font-family: Tahoma;
 }
 
+.lfn {	
+	color: var(--FN-color) ;
+	vertical-align: top;
+	font-size: 60%;
+	font-weight: bold;
+}
+
+.fn {	
+	color: var(--FN-color) ;
+	font-weight: bold;
+}
+
+.tags {
+	background-color:  var(--tagB-color);
+	color: var(--tagF-color);	
+	font-family:Lucida;
+	font-style: italic;
+	padding:0 5pt 0 5pt;
+	
+}
+
+.marked {
+	display: inline-block;
+	font-weight: bold;
+	background-color:var( --markedB-color);
+	padding: 3pt 5pt 3pt 5pt;
+	margin: 3pt;
+}
+
 ul {
-    padding: 0; /* Убираем поля */
-    margin-left: 15pt; /* Отступ слева */
+    padding: 0; 
+    margin-left: 15pt; 
+}
+
+ul li {
+	list-style-type: "✦ ";
+}
+
+ul li li{
+	list-style-type: "✧ ";
 }
 
 ol {
-    padding: 0; /* Убираем поля */
-    margin-left: 15pt; /* Отступ слева */
+    padding: 0;
+    margin-left: 15pt;
 }
 
 li {
@@ -100,61 +144,71 @@ li {
 	margin-top: 7pt;
 }
 
+:is(h1, h2, h3, h4, h5, h6)  {
+	color: var(--head-color);
+	font-family: GeorgiaBold;
+	
+}
+
+h2 {
+	text-align: center;
+	font-size:17pt;	
+	letter-spacing: 3pt;
+}
+
 h3 {
 	text-align: center;
 	font-size:15pt;
-	font-family: Helvetica;
-	letter-spacing: 3pt;
-	
+	letter-spacing: 2pt;
 }
+
 h4 {
-	font-family: Helvetica;
+	font-size:13pt;
 	letter-spacing: 1pt;
 }
 
 
 .footer {
-    position: fixed; /* Фиксированное положение */
-    bottom: 5%; /* Левый нижний угол */
+    position: fixed; 
+    bottom: 2%; 
 	background-color: var(--gs01);
-	text-align: center;
+	margin: 0;
+	text-align: center;	
 	width: 100%;
 	height: 6%;
 	font-family: Tahoma;
-	font-size: 14pt;
-	
-	ul {
-		list-style-type: none;
-		margin: 0 30% 0 30%;
-		overflow: hidden;
-		background-color: var(--gs01);
-		height: 100%;
-	}
-	
-	li {
-		float: left;
-		width: 12%;
-		border-right: 1px solid var(--gs1);
-		
-	}
-	
-	li:last-child {
-		border-right: none;
-	}
-	
-	li a {
-		display: block;
-		
-		color: var(--gs3);
-		text-align: center;
-		padding:  0pt 8pt 16pt 8pt;
-		text-decoration: none;
-		
-	}
-	
-	
-	
+	font-style:bold;
+	font-size: 16pt;
 }
-.active {
-	background-color: var(--gs2);
+
+.footer	ul {
+	list-style-type: none;
+	overflow: hidden;
+	height: 100%;
+	padding-bottom: 3pt;
+}
+
+.footer	li {
+	float: left;
+	width: 10%;
+	height: 100%;
+	padding: 3pt 0 0 0;
+	margin: 0 0 0 0;
+	border-right: 1px solid var(--gs1);
+	list-style-type: none;
+}
+
+.footer	li:last-child {
+	border-right: none;
+}
+
+.footer	li a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.footer .current {
+	background-color: var( --footLC-color);
+	border-radius: 30%;
 }
