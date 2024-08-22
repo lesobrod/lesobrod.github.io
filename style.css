@@ -10,28 +10,28 @@
 
 
 @media screen and (orientation: landscape) {
-	.center { padding-top: 10pt; }
-	.text {padding: 1pt 20% 0 20%;}
+
+	.text {padding: 1pt 25% 0 25%;}
 	.footer ul{width: 35%; margin: 0 30% 0 30%}
 	.content {padding: 0 30% 0 30%;}
 }
 
 @media screen and (orientation: portrait) {
-	.center { padding-top: 25pt; }
+
 	.text {padding: 2pt 5% 0 5%;}
 	.footer ul{width: 100%; margin:0}
 	.content {padding: 2pt 5% 0 5%;}
 }
 
 :root {
-	--text-color:#a3c1db;
-	--quote-color:#5382ac;
-	--head-color:#4783b8;
-	--footLC-color:#1c273b;
+	--text-color:#888888;
+	--quote-color:#606060;
+	--head-color:#808080;
+	--footLC-color:#202020;
 	--tagB-color:#31134f;
 	--tagF-color:#ad8dcc;
-	--markedB-color:#00264d;
-	--FN-color:#4783b8;
+	--markedB-color:#505050;
+	--LFN-color: #C0C0C0;
 }
 
 a {
@@ -85,7 +85,7 @@ hr {
 
 
 .comment { 
-	margin: 5% 15% 5% 0;
+	margin: 1% 15% 5% 0;
 	color:var(--text-color);
 	font-size:10pt;
 	font-weight: normal;
@@ -93,14 +93,14 @@ hr {
 }
 
 .lfn {	
-	color: var(--FN-color) ;
+	color: var(--LFN-color) ;
 	vertical-align: top;
 	font-size: 60%;
 	font-weight: bold;
 }
 
 .fn {	
-	color: var(--FN-color) ;
+	color: var(--text-color) ;
 	font-weight: bold;
 }
 
@@ -117,6 +117,7 @@ hr {
 	display: inline-block;
 	font-weight: bold;
 	background-color:var( --markedB-color);
+	color: black;
 	padding: 3pt 5pt 3pt 5pt;
 	margin: 3pt;
 }
@@ -194,6 +195,8 @@ h4 {
 	height: 100%;
 	padding: 3pt 0 0 0;
 	margin: 0 0 0 0;
+	font-style:bold;
+	font-size: 13pt;
 	border-right: 1px solid var(--gs1);
 	list-style-type: none;
 }
@@ -209,6 +212,6 @@ h4 {
 }
 
 .footer .current {
-	background-color: var( --footLC-color);
+	background-color: var(--footLC-color);
 	border-radius: 30%;
 }
