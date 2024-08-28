@@ -24,7 +24,7 @@
 }
 
 :root {
-	--text-color:#888888;
+	--text-color:#989898;
 	--quote-color:#606060;
 	--head-color:#808080;
 	--footLC-color:#202020;
@@ -50,14 +50,14 @@ a {
 	padding-left: 20pt;
 }
 .lnext a::before {
-	content: "⮞⮞ ";
+	content: ">> ";
 }
 .lprev a {
 	text-decoration: none;
 	padding-right: 20pt;
 }
 .lprev a::before{
-	content: "⮜⮜ ";
+	content: "<< ";
 }
 
 
@@ -75,6 +75,7 @@ body {
 
 blockquote {
 	font-family: Georgia;
+	font-size: 11pt;
 	border-left: 1pt solid var(--quote-color);
 	padding-left: 5pt;
 	margin-left:5pt;
