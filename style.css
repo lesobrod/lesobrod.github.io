@@ -10,15 +10,15 @@
 
 
 @media screen and (orientation: landscape) {
-
-	.text {padding: 1pt 25% 0 25%;}
+	
+	.text, h2{padding: 1pt 25% 0 25%}
 	.footer ul{width: 35%; margin: 0 30% 0 30%}
-	.content {padding: 0 30% 0 30%;}
+	.content {padding: 0 30% 0 30%}
 }
 
 @media screen and (orientation: portrait) {
-
-	.text {padding: 2pt 5% 0 5%;}
+	
+	.text, h2 {padding: 2pt 5% 0 5%;}
 	.footer ul{width: 100%; margin:0}
 	.content {padding: 2pt 5% 0 5%;}
 }
@@ -37,6 +37,29 @@
 a {
 	color: var(--text-color);
 }
+
+.lnext {
+	float: right;
+}
+
+.lprev {
+	float:left;
+}
+.lnext a {
+	text-decoration: none;
+	padding-left: 20pt;
+}
+.lnext a::before {
+	content: "⮞⮞ ";
+}
+.lprev a {
+	text-decoration: none;
+	padding-right: 20pt;
+}
+.lprev a::before{
+	content: "⮜⮜ ";
+}
+
 
 html {
 	height:100%;
@@ -85,7 +108,8 @@ hr {
 
 
 .comment { 
-	margin: 1% 15% 5% 0;
+	margin-top: 15pt;
+	margin-bottom: 10pt;
 	color:var(--text-color);
 	font-size:10pt;
 	font-weight: normal;
@@ -155,6 +179,7 @@ h2 {
 	text-align: center;
 	font-size:17pt;	
 	letter-spacing: 3pt;
+	
 }
 
 h3 {
