@@ -12,6 +12,7 @@
 @media screen and (orientation: landscape) {
 	
 	.text, h2{padding: 1pt 25% 0 25%}
+	.text {height: 80%}
 	.footer ul{width: 35%; margin: 0 30% 0 30%}
 	.content {padding: 0 30% 0 30%}
 }
@@ -19,7 +20,8 @@
 @media screen and (orientation: portrait) {
 	
 	.text, h2 {padding: 2pt 5% 0 5%;}
-	.footer ul{width: 100%; margin:0}
+	.text {height: 75%}
+	.footer ul{width: 95%; margin:0}
 	.content {padding: 2pt 5% 0 5%;}
 }
 
@@ -98,7 +100,6 @@ hr {
 	margin: 0 auto;
 	font-size: 11pt;
 	font-family: Verdana;
-	height: 80%;
 	overflow: auto;
 	margin-bottom: 10%;
 }
