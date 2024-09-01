@@ -8,31 +8,31 @@
     src: url(Fonts/georgiab.ttf);
 }
 
-
 @media screen and (orientation: landscape) {
 	
-	.text, h2{padding: 1pt 25% 0 25%}
-	.text {height: 80%}
+	.text, .heads mainhead, .heads mainhead bighead {padding: 0 25% 0 25%}
+	
 	.footer ul{width: 35%; margin: 0 30% 0 30%}
 	.content {padding: 0 30% 0 30%}
 }
 
 @media screen and (orientation: portrait) {
 	
-	.text, h2 {padding: 2pt 5% 0 5%;}
-	.text {height: 75%}
+	.text, .heads mainhead, .heads mainhead bighead {padding: 0 5% 0 5%;}
+	
 	.footer ul{width: 95%; margin:0}
 	.content {padding: 2pt 5% 0 5%;}
 }
 
 :root {
-	--text-color:#989898;
-	--quote-color:#606060;
-	--head-color:#808080;
-	--footLC-color:#202020;
-	--tagB-color:#31134f;
-	--tagF-color:#ad8dcc;
-	--markedB-color:#505050;
+	--back-color: #111111;
+	--text-color: #999999;
+	--quote-color: #777777;
+	--head-color: #888888;
+	--footLC-color: #333333;
+	--tagB-color: #444444;
+	--tagF-color: #777777;
+	--markedB-color: #555555;
 	--LFN-color: #C0C0C0;
 }
 
@@ -40,27 +40,6 @@ a {
 	color: var(--text-color);
 }
 
-.lnext {
-	float: right;
-}
-
-.lprev {
-	float:left;
-}
-.lnext a {
-	text-decoration: none;
-	padding-left: 20pt;
-}
-.lnext a::before {
-	content: ">> ";
-}
-.lprev a {
-	text-decoration: none;
-	padding-right: 20pt;
-}
-.lprev a::before{
-	content: "<< ";
-}
 
 
 html {
@@ -68,7 +47,7 @@ html {
 }
 
 body {
-	background-color: black;
+	background-color: var(--back-color);
 	color: var(--text-color);
 	height:100%;
 	overflow: hidden;
@@ -85,23 +64,59 @@ blockquote {
 }
 
 .content {
-	margin: 0 auto;
+	position:fixed;
+	top: 10%;
 	font-size: 14pt;
 	font-weight: bold;
 	font-family: Georgia;
 }
 
-hr {
+.heads {
 	color: var(--head-color);
-}	
+	font-family: GeorgiaBold;
+	text-align: center;
+}
+
+.heads.mainhead {
+	position:fixed;
+	top:0;
+	width: 100%;
+	padding: 7pt 0 7pt 0;
+	font-size:15pt;	
+	letter-spacing: 3pt;
+	height: 12pt;
+}
+
+.heads.contenthead {
+	color: var(--text-color);
+	position:fixed;
+	top:0;
+	padding: 7pt 0 7pt 0;
+	width: 100%;	
+	font-size:15pt;	
+	letter-spacing: 3pt;
+	
+}
+
+.heads.mainhead.bighead {
+	height: 24pt;
+}
+
+.heads.innerhead {
+	font-size:12pt;	
+	letter-spacing: 1pt;
+	padding-bottom: 5pt;
+}
 
 
 .text { 
-	margin: 0 auto;
 	font-size: 11pt;
 	font-family: Verdana;
 	overflow: auto;
-	margin-bottom: 10%;
+	position: fixed;	
+	bottom: 10%;
+	top: 10%;
+	margin: 0 auto;
 }
 
 .text li {
@@ -117,6 +132,10 @@ hr {
 	font-weight: normal;
 	font-family: Tahoma;
 }
+
+hr {
+	color: var(--head-color);
+}	
 
 .lfn {	
 	color: var(--LFN-color) ;
@@ -171,35 +190,9 @@ li {
 	margin-top: 7pt;
 }
 
-:is(h1, h2, h3, h4, h5, h6)  {
-	color: var(--head-color);
-	font-family: GeorgiaBold;
-	
-}
-
-h2 {
-	text-align: center;
-	font-size:17pt;	
-	letter-spacing: 3pt;
-	
-}
-
-h3 {
-	text-align: center;
-	font-size:15pt;
-	letter-spacing: 2pt;
-}
-
-h4 {
-	font-size:13pt;
-	letter-spacing: 1pt;
-}
-
-
 .footer {
     position: fixed; 
     bottom: 2%; 
-	background-color: var(--gs01);
 	margin: 0;
 	text-align: center;	
 	width: 100%;
@@ -224,7 +217,6 @@ h4 {
 	margin: 0 0 0 0;
 	font-style:bold;
 	font-size: 13pt;
-	border-right: 1px solid var(--gs1);
 	list-style-type: none;
 }
 
