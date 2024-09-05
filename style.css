@@ -3,10 +3,6 @@
     src: url(Fonts/georgia.ttf);
 }
 
-@font-face {
-	font-family: GeorgiaBold;
-    src: url(Fonts/georgiab.ttf);
-}
 
 @media screen and (orientation: landscape) {
 	
@@ -33,13 +29,8 @@
 	--tagB-color: #444444;
 	--tagF-color: #777777;
 	--markedB-color: #555555;
-	--LFN-color: #C0C0C0;
+	--LFN-color: #888888;
 }
-
-a {
-	color: var(--text-color);
-}
-
 
 
 html {
@@ -71,9 +62,16 @@ blockquote {
 	font-family: Georgia;
 }
 
+a {
+	color: var(--text-color);
+}
+
+
+
 .heads {
 	color: var(--head-color);
-	font-family: GeorgiaBold;
+	font-family: Georgia;
+	font-weight: bold;
 	text-align: center;
 }
 
@@ -103,9 +101,9 @@ blockquote {
 }
 
 .heads.innerhead {
-	font-size:12pt;	
+	font-size:13pt;	
 	letter-spacing: 1pt;
-	padding-bottom: 5pt;
+	padding: 7pt 0 5pt 0;
 }
 
 
@@ -114,6 +112,7 @@ blockquote {
 	font-family: Verdana;
 	overflow: auto;
 	position: fixed;	
+	min-width: 50%;
 	bottom: 10%;
 	top: 10%;
 	margin: 0 auto;
@@ -134,7 +133,7 @@ blockquote {
 }
 
 hr {
-	color: var(--head-color);
+	color: var(--quote-color);
 }	
 
 .lfn {	
