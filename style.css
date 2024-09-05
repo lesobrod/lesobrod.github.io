@@ -26,8 +26,8 @@
 	--quote-color: #777777;
 	--head-color: #888888;
 	--footLC-color: #333333;
-	--tagB-color: #444444;
-	--tagF-color: #777777;
+	--tagB-color: #222222;
+	--tagF-color: #888888;
 	--markedB-color: #555555;
 	--LFN-color: #888888;
 }
@@ -150,6 +150,7 @@ hr {
 
 .tags {
 	background-color:  var(--tagB-color);
+	border: 1px dashed;
 	color: var(--tagF-color);	
 	font-family:Lucida;
 	font-style: italic;
