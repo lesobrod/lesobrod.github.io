@@ -1,2 +1,2 @@
 # lesobrod.github.io
-Model of reality
+Please [see here]() for a while
