@@ -37,6 +37,14 @@ html {
 	height:100%;
 }
 
+
+a:focus {
+	color: inherit;
+	outline: 0 !important;
+	box-shadow: none !important;
+}
+
+
 body {
 	background-color: var(--back-color);
 	color: var(--text-color);
@@ -52,6 +60,13 @@ blockquote {
 	padding-left: 5pt;
 	margin-left:5pt;
 	color: var(--quote-color);
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 .content {
@@ -136,17 +151,11 @@ hr {
 	color: var(--quote-color);
 }	
 
-.lfn {	
+.lfn, .fn {	
 	color: var(--LFN-color) ;
-	vertical-align: top;
-	font-size: 60%;
-	font-weight: bold;
 }
 
-.fn {	
-	color: var(--text-color) ;
-	font-weight: bold;
-}
+
 
 .tags {
 	background-color:  var(--tagB-color);
@@ -172,13 +181,23 @@ ul {
     margin-left: 15pt; 
 }
 
-ul li {
+
+.markedul li {
 	list-style-type: "✦ ";
 }
 
-ul li li{
+.markedul li li{
 	list-style-type: "✧ ";
 }
+
+.simpleul ul li {
+	list-style-type: "• ";
+}
+
+.simpleul ul li li{
+	list-style-type: "- ";
+}
+
 
 ol {
     padding: 0;
@@ -233,4 +252,5 @@ li {
 .footer .current {
 	background-color: var(--footLC-color);
 	border-radius: 30%;
+	cursor: pointer;
 }
