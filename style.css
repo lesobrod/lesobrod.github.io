@@ -1,0 +1,256 @@
+@font-face {
+	font-family: Georgia;
+    src: url(Fonts/georgia.ttf);
+}
+
+
+@media screen and (orientation: landscape) {
+	
+	.text, .heads mainhead, .heads mainhead bighead {padding: 0 25% 0 25%}
+	
+	.footer ul{width: 35%; margin: 0 30% 0 30%}
+	.content {padding: 0 30% 0 30%}
+}
+
+@media screen and (orientation: portrait) {
+	
+	.text, .heads mainhead, .heads mainhead bighead {padding: 0 5% 0 5%;}
+	
+	.footer ul{width: 95%; margin:0}
+	.content {padding: 2pt 5% 0 5%;}
+}
+
+:root {
+	--back-color: #111111;
+	--text-color: #999999;
+	--quote-color: #666666;
+	--head-color: #888888;
+	--footLC-color: #333333;
+	--tagB-color: #222222;
+	--tagF-color: #888888;
+	--markedB-color: #555555;
+	--LFN-color: #888888;
+}
+
+
+html {
+	height:100%;
+}
+
+
+a:focus {
+	color: inherit;
+	outline: 0 !important;
+	box-shadow: none !important;
+}
+
+
+body {
+	background-color: var(--back-color);
+	color: var(--text-color);
+	height:100%;
+	overflow: hidden;
+}
+
+
+blockquote {
+	font-family: Georgia;
+	font-size: 11pt;
+	border-left: 1pt solid var(--quote-color);
+	padding-left: 5pt;
+	margin-left:5pt;
+	color: var(--quote-color);
+}
+
+.img-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.content {
+	position:fixed;
+	top: 10%;
+	font-size: 14pt;
+	font-weight: bold;
+	font-family: Georgia;
+}
+
+a {
+	color: var(--text-color);
+}
+
+
+
+.heads {
+	color: var(--head-color);
+	font-family: Georgia;
+	font-weight: bold;
+	text-align: center;
+}
+
+.heads.mainhead {
+	position:fixed;
+	top:0;
+	width: 100%;
+	padding: 7pt 0 7pt 0;
+	font-size:15pt;	
+	letter-spacing: 3pt;
+	height: 12pt;
+}
+
+.heads.contenthead {
+	color: var(--text-color);
+	position:fixed;
+	top:0;
+	padding: 7pt 0 7pt 0;
+	width: 100%;	
+	font-size:15pt;	
+	letter-spacing: 3pt;
+	
+}
+
+.heads.mainhead.bighead {
+	height: 24pt;
+}
+
+.heads.innerhead {
+	font-size:13pt;	
+	letter-spacing: 1pt;
+	padding: 7pt 0 5pt 0;
+}
+
+
+.text { 
+	font-size: 11pt;
+	font-family: Verdana;
+	overflow: auto;
+	position: fixed;	
+	min-width: 50%;
+	bottom: 10%;
+	top: 10%;
+	margin: 0 auto;
+}
+
+.text li {
+	margin: 4pt;
+}
+
+
+.comment { 
+	margin-top: 15pt;
+	margin-bottom: 10pt;
+	color:var(--text-color);
+	font-size:10pt;
+	font-weight: normal;
+	font-family: Tahoma;
+}
+
+hr {
+	color: var(--quote-color);
+}	
+
+.lfn, .fn {	
+	color: var(--LFN-color) ;
+}
+
+
+
+.tags {
+	background-color:  var(--tagB-color);
+	border: 1px dashed;
+	color: var(--tagF-color);	
+	font-family:Lucida;
+	font-style: italic;
+	padding:0 5pt 0 5pt;
+	
+}
+
+.marked {
+	display: inline-block;
+	font-weight: bold;
+	background-color:var( --markedB-color);
+	color: black;
+	padding: 3pt 5pt 3pt 5pt;
+	margin: 3pt;
+}
+
+ul {
+    padding: 0; 
+    margin-left: 15pt; 
+}
+
+
+.markedul li {
+	list-style-type: "✦ ";
+}
+
+.markedul li li{
+	list-style-type: "✧ ";
+}
+
+.simpleul ul li {
+	list-style-type: "• ";
+}
+
+.simpleul ul li li{
+	list-style-type: "- ";
+}
+
+
+ol {
+    padding: 0;
+    margin-left: 15pt;
+}
+
+li {
+	margin-bottom: 7pt;
+	margin-top: 7pt;
+}
+
+.footer {
+    position: fixed; 
+    bottom: 2%; 
+	margin: 0;
+	text-align: center;	
+	width: 100%;
+	height: 6%;
+	font-family: Tahoma;
+	font-style:bold;
+	font-size: 16pt;
+}
+
+.footer	ul {
+	list-style-type: none;
+	overflow: hidden;
+	height: 100%;
+	padding-bottom: 3pt;
+}
+
+.footer	li {
+	float: left;
+	width: 8%;
+	height: 100%;
+	padding: 3pt 0 0 0;
+	margin: 0 0 0 0;
+	font-style:bold;
+	font-size: 13pt;
+	list-style-type: none;
+}
+
+.footer	li:last-child {
+	border-right: none;
+}
+
+.footer	li a {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.footer .current {
+	background-color: var(--footLC-color);
+	border-radius: 30%;
+	cursor: pointer;
+}
